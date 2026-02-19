@@ -17,7 +17,7 @@ interface WatchlistMovie {
 const Watchlist = () => {
   const navigate = useNavigate()
   const { user, updateWatchlist } = useAuthStore()
-  const [loading, setLoading] = useState(false)
+  const [loading] = useState(false)
   const [watchlist, setWatchlist] = useState<WatchlistMovie[]>([])
 
   useEffect(() => {

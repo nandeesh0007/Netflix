@@ -17,7 +17,7 @@ interface FavoriteMovie {
 const Favorites = () => {
   const navigate = useNavigate()
   const { user, updateFavorites } = useAuthStore()
-  const [loading, setLoading] = useState(false)
+  const [loading] = useState(false)
   const [favorites, setFavorites] = useState<FavoriteMovie[]>([])
 
   useEffect(() => {

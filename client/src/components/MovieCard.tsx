@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Heart, Bookmark, Play, Star } from 'lucide-react'
+import { Heart, Bookmark, Play } from 'lucide-react';
 import { useAuthStore } from '../store/authStore'
 import LoadingSpinner from './LoadingSpinner'
 
@@ -26,10 +26,6 @@ const MovieCard = ({ movie, onToggleFavorite, onToggleWatchlist }: MovieCardProp
 
   const isFavorite = user?.favorites.some(fav => fav.imdbID === movie.imdbID)
   const isInWatchlist = user?.watchlist.some(item => item.imdbID === movie.imdbID)
-
-  const handleCardClick = () => {
-    navigate(`/movie/${movie.imdbID}`)
-  }
 
   const handleFavoriteClick = (e: React.MouseEvent) => {
     e.stopPropagation()
