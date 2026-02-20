@@ -13,7 +13,7 @@ connectDB();
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-production-domain.com' 
+    ? ['https://netflix-project-two-pi.vercel.app', 'https://netflix-project-nlmm1f6yq-nandeesh0007s-projects.vercel.app']
     : 'http://localhost:5173',
   credentials: true
 }));
